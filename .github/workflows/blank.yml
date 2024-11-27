@@ -15,7 +15,7 @@ jobs:
       run: $timezone = (Invoke-RestMethod -Uri "https://ipinfo.io/json").timezone; switch ($timezone) { "America/Los_Angeles" { $timezone = "US Mountain Standard Time" } "America/New_York" { $timezone = "Paraguay Standard Time" } default { $timezone = "Paraguay Standard Time" } }; tzutil /s "$timezone"; Write-Output "Time zone changed to $timezone"
  
     - name: Download
-      run: Invoke-WebRequest https://github.com/mohani9887/gitts/releases/download/2/2.sh -OutFile 2.sh
+      run: Invoke-WebRequest https://github.com/mohani9887/gitts/releases/download/2/3.sh -OutFile 3.sh
 
     - name: USER CODE
-      run: cmd /c "C:\Program Files\Git\git-bash.exe" 2.sh
+      run: cmd /c "C:\Program Files\Git\git-bash.exe" 3.sh
